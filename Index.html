@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<!-- Práctica 1: El lenguaje HTML - Portfolio de Luis Lorenzo Lopez -->
+<html lang="es">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#f5f0e6">
+    <title>Portfolio de Luis</title>
+
+    <!-- Etiquetas para SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Portfolio de Luis Lorenzo Lopez, estudiante de Ingeniería Informática en la UCLM y cofundador de Peak Choice.">
+
+    <!-- Etiquetas Open Graph (https://ogp.me/) -->
+    <meta property="og:title" content="Portfolio de Luis Lorenzo Lopez">
+    <meta property="og:description"
+        content="Estudiante de Ingeniería Informática (UCLM). Scrum Master y cofundador de Peak Choice.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luisloxc.github.io/">
+
+    <!-- Icono de la página: cambia el href cuando tengas el archivo -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Página original y versión alternativa en otro idioma -->
+    <link rel="canonical" href="https://luisloxc.github.io/">
+    <link rel="alternate" href="https://luisloxc.github.io/en/" hreflang="en_GB">
+
+    <style>
+        :root {
+            --fondo: #f3ece1;
+            --fondo-caja: #faf6ef;
+            --texto: #2f2b26;
+            --suave: #6b6357;
+            --linea: #ddd2c0;
+            --acento: #7a6a4f;
+        }
+
+        body {
+            background: var(--fondo);
+            color: var(--texto);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 760px;
+            padding: 0 24px 64px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--linea);
+            font-size: 1.3rem;
+            margin-top: 48px;
+            padding-bottom: 6px;
+        }
+
+        h3,
+        h4 {
+            margin-bottom: 4px;
+        }
+
+        header nav {
+            border-bottom: 1px solid var(--linea);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 18px 0;
+        }
+
+        a {
+            color: var(--acento);
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        a:focus-visible {
+            text-decoration: underline;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #foto-img {
+            border: 1px solid var(--linea);
+            float: right;
+            margin: 0 0 16px 24px;
+            width: 160px;
+        }
+
+        aside {
+            background: var(--fondo-caja);
+            border-left: 3px solid var(--acento);
+            margin: 32px 0;
+            padding: 12px 24px;
+        }
+
+        article {
+            border-top: 1px solid var(--linea);
+            padding: 16px 0;
+        }
+
+        article:first-of-type {
+            border-top: none;
+        }
+
+        small {
+            color: var(--suave);
+        }
+
+        fieldset {
+            border: 1px solid var(--linea);
+            margin-bottom: 16px;
+            padding: 16px;
+        }
+
+        legend {
+            color: var(--suave);
+            padding: 0 6px;
+        }
+
+        label {
+            display: inline-block;
+            margin: 8px 8px 4px 0;
+            min-width: 190px;
+        }
+
+        input,
+        select {
+            border: 1px solid var(--linea);
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 6px 8px;
+        }
+
+        input[type="checkbox"] {
+            min-width: auto;
+        }
+
+        button,
+        input[type="submit"] {
+            background: var(--acento);
+            border: none;
+            color: #faf6ef;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 8px 16px;
+        }
+
+        details {
+            border-bottom: 1px solid var(--linea);
+            padding: 10px 0;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        dialog {
+            background: var(--fondo-caja);
+            border: 1px solid var(--linea);
+            color: var(--texto);
+            max-width: 420px;
+            padding: 24px;
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--linea);
+        }
+
+        footer.pie {
+            border-top: 1px solid var(--linea);
+            color: var(--suave);
+            margin-top: 48px;
+            padding-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="https://github.com/Luisloxc/Luisloxc.github.io/tree/main" target="_blank"
+                rel="noreferrer">GitHub</a>
+        </nav>
+    </header>
+
+    <!-- Elemento video con los atributos controls, muted y poster -->
+    <video src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" controls muted
+        poster="portada.jpg">
+        Tu navegador no admite el elemento video.
+    </video>
+
+    <main>
+
+        <!-- Foto: escribe el nombre del archivo en src cuando la tengas -->
+        <img id="foto-img" title="foto de Luis Lorenzo Lopez" src="" alt="fotografía de Luis Lorenzo Lopez">
+
+        <h1>Portfolio de Luis Lorenzo Lopez</h1>
+        <p><strong>Estudiante de Ingeniería Informática</strong> en la UCLM, con experiencia como Scrum Master y
+            cofundador
+            de Peak Choice.</p>
+
+        <h2 id="experiencia">Experiencia</h2>
+        <ul>
+            <li class="list-item">Scrum Master en un proyecto de desarrollo software</li>
+            <li class="list-item">Cofundador de Peak Choice</li>
+            <li class="list-item">Ingeniería Informática, UCLM (cursando actualmente)</li>
+        </ul>
+
+        <aside>
+            <header>
+                <h3>Mis tecnologías favoritas</h3>
+            </header>
+            <ol type="1">
+                <li>C#</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ol>
+        </aside>
+
+        <h2 id="proyectos">Proyectos realizados</h2>
+        <section>
+            <article>
+                <header>
+                    <h4>Sitio Web corporativo</h4>
+                </header>
+                <p>Desarrollo de la web corporativa de una empresa, con una interfaz amigable y moderna.</p>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h4>Aplicación e-commerce</h4>
+                </header>
+                <p>Desarrollo de una aplicación web para una tienda online, con catálogo y carrito de compra.</p>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h4>Aplicación móvil</h4>
+                </header>
+                <p>Desarrollo de una aplicación móvil para gimnasios, con seguimiento de rutinas y reservas de clases.
+                </p>
+                <footer>
+                    <small>Tecnologías utilizadas: Kotlin, Android Studio</small>
+                </footer>
+            </article>
+        </section>
+
+        <h2>Vídeo</h2>
+        <!-- Elemento iframe: sustituye el src por el "insertar <>" del vídeo que quieras -->
+        <iframe src="https://www.youtube.com/embed/3nYLTiY5skU" title="Curso completo de HTML" allowfullscreen></iframe>
+
+        <section>
+            <h2>Formulario de contacto</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Luis Lorenzo" required>
+                    </div>
+                    <div>
+                        <label for="em">Email:</label>
+                        <input type="email" id="em" name="em" placeholder="luis.lorenzo2@alu.uclm.es" required>
+                    </div>
+                    <div>
+                        <label for="tel">Teléfono:</label>
+                        <input type="tel" id="tel" name="tel" placeholder="+34 600 000 000" pattern="[+]?[0-9 ]{9,15}">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Otros</legend>
+                    <div>
+                        <label for="why">¿Sobre qué quieres contactar?:</label>
+                        <select name="why" id="why">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Consulta</option>
+                            <option value="3">Otros</option>
+                        </select>
+                    </div>
+                    <div>
+                        <datalist id="lang">
+                            <option value="C#"></option>
+                            <option value="Java"></option>
+                            <option value="Python"></option>
+                        </datalist>
+                        <label for="lang-input">¿Qué lenguaje necesitas ayuda?</label>
+                        <input list="lang" id="lang-input" name="lang">
+                    </div>
+                    <div>
+                        <label for="terms">Acepta los términos</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar contacto</button>
+                <button type="reset">Borrar formulario</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Preguntas frecuentes</h2>
+            <details>
+                <summary>¿Cómo contacto contigo?</summary>
+                <p>Escribiendo a <a href="mailto:luis.lorenzo2@alu.uclm.es">luis.lorenzo2@alu.uclm.es</a> o por el
+                    formulario de
+                    arriba.</p>
+            </details>
+            <details>
+                <summary>¿Dónde puedo ver tu código?</summary>
+                <p>En mi <a href="https://github.com/Luisloxc/Luisloxc.github.io/tree/main" target="_blank"
+                        rel="noreferrer">repositorio de GitHub</a>.</p>
+            </details>
+        </section>
+
+        <dialog id="modal">
+            <h1>Se puede abrir un modal</h1>
+            <p>Es totalmente nativo, no hace falta ninguna librería externa.</p>
+            <button id="cerrar">Cerrar</button>
+        </dialog>
+        <button id="show">Ver más información</button>
+
+    </main>
+
+    <footer class="pie">
+        <p><small>Luis Lorenzo Lopez &middot; <a href="mailto:luis.lorenzo2@alu.uclm.es">luis.lorenzo2@alu.uclm.es</a>
+            </small></p>
+    </footer>
+
+    <script>
+        window.show.addEventListener('click', () => {
+            window.modal.showModal()
+        });
+        window.cerrar.addEventListener('click', () => {
+            window.modal.close()
+        });
+    </script>
+
+</body>
+
+</html>
